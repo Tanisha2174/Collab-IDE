@@ -1,0 +1,28 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "database",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-08-23",
+  "observability": {
+    "enabled": true
+  },
+
+  "services": [
+    {
+      "binding": "STORAGE",
+      "service": "storage"
+    }
+  ],
+  // Bind your D1 database here
+  "d1_databases": [
+    {
+      "binding": "DB", // the variable you’ll use in code
+      "database_name": "d1-virtualbox",
+      "database_id": "9ede1039-81a6-484f-8f8d-dfdd48b9b276"
+    }
+  ]
+}

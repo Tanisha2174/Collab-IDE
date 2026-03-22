@@ -1,0 +1,48 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1756227621376,
+      "tag": "0000_tired_elektra",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1756312825566,
+      "tag": "0001_low_xorn",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1756677102073,
+      "tag": "0002_wet_karen_page",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1760360754262,
+      "tag": "0003_medical_sphinx",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1760860432693,
+      "tag": "0004_flat_sway",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1760861302005,
+      "tag": "0005_wide_miss_america",
+      "breakpoints": true
+    }
+  ]
+}

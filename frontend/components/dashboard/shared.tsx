@@ -1,0 +1,52 @@
+import { Virtualbox } from "@/lib/types";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table";
+import Image from "next/image";
+import { Button } from "../ui/button";
+import { ChevronRight } from "lucide-react";
+import Avatar from "../ui/avatar";
+
+
+export default function DashboardSharedWithMe({virtualboxes}:{virtualboxes : Virtualbox[]}){
+    return(
+        <div className="grow p-4 flex flex-col">
+            <div className="text-xl font-medium mb-8">Shared With Me</div>
+            <div className="grow w-full">
+                <Table>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead>Virtualbox Name</TableHead>
+                            <TableHead>Shared By</TableHead>
+                            <TableHead>Opened</TableHead>
+                            <TableHead></TableHead>
+                        </TableRow>
+                    </TableHeader>
+
+                    <TableBody>
+                        {virtualboxes.map((virtualbox)=>(
+                            <TableRow key={virtualbox.id}>
+                                <TableCell>
+                                    <div className="font-medium flex items-center">
+                                        <Image src={virtualbox.type==="react" ? "/project-icons/react.svg" : "/project-icons/node.svg"} width={20} height={20} className="mr-2" alt="" />
+                                        {virtualbox.name}
+                                    </div>
+                                </TableCell>
+                                <TableCell>
+                                    <div className="flex items-center">
+                                        <Avatar name="Tanisha Panesar" className="mr-2" />
+                                        Tanisha Panesar
+                                    </div>
+                                </TableCell>
+                                <TableCell>{new Date().toLocaleDateString()}</TableCell>
+                                <TableCell className="text-right">
+                                    <Button>
+                                        Open <ChevronRight className="h-4 w-4 ml-2" />
+                                    </Button>
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </div>
+        </div>
+    )
+}
